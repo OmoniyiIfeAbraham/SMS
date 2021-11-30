@@ -1,0 +1,49 @@
+body {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/static/images/two.jpg');
+    position: relative;
+}
+
+.btn1 {
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    border-color: white;
+}
+
+.btn1:hover {
+    background-color: blue;
+    color: white;
+}
+
+.btn2 {
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    border-color: white;
+}
+
+.btn2:hover {
+    background-color: blue;
+    color: white;
+}
+
+#one {
+    color: white;
+    font-size: 60px;
+}
+
+#two {
+    color: white;
+    font-size: 40px;
+    margin-top: 200px;
+}
+
+#three {
+    color: white;
+    font-size: 40px;
+    margin-top: 50px;
+}

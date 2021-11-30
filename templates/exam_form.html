@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Exams</title>
+</head>
+
+<body>
+    <form action="/exams/{{id}}" method="POST">
+        <input type="text" name="exam_code" placeholder="Exam Course Code">
+        <br>
+        <select name="exam_type">
+            <option value="Main Exam">Main Exam</option>
+            <option value="Mid-Semester Exam">Mid-Semester Exam</option>
+            <option value="Supplementary Exam">Supplementary Exam</option>
+        </select>
+        <br>
+        <input type="number" name="exam_score" placeholder="Exam Score">
+        <br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+
+</html>

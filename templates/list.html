@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Student ID</th>
+            <th>Age</th>
+            <th>Mobile</th>
+            <th>Details</th>
+            <th>Delete</th>
+        </tr>
+
+        {% for students in student %}
+        <tr>
+            <td>{{students.name}}</td>
+            <td>{{students.stu_id}}</td>
+            <td>{{students.age}}</td>
+            <td>{{students.mobile}}</td>
+            <td>
+                <a href="{{ url_for( 'students_details', id=students.ID)}}">Details</a>
+            </td>
+            <td>
+                <a href="{{ url_for( 'delete_students', id= students.ID)}}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

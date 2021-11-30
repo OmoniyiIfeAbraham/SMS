@@ -1,0 +1,42 @@
+body {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/static/images/twelve.jpg');
+    position: relative;
+}
+
+h1 {
+    color: white;
+    margin-top: 200px;
+}
+
+#input {
+    background-color: transparent;
+    margin: 30px 0;
+    border: 0;
+    border-bottom: 1px solid white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    transition: .3s box-shadow;
+    width: 500px;
+}
+
+#input:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+}
+
+#btn {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: white;
+    transition: .5s border-radius;
+    transition: .2s background-color;
+}
+
+#btn:hover {
+    border-radius: 20px;
+    background-color: blue;
+    color: white;
+}

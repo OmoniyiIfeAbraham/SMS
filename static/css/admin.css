@@ -1,0 +1,37 @@
+#btn1 {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: blue;
+    color: peachpuff;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.5);
+    transition: .5s box-shadow;
+    transition: .5s width;
+    margin-top: 40%;
+    margin-right: 10px;
+}
+
+#btn1:hover {
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0);
+    width: 200px;
+}
+
+#btn2 {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: blue;
+    color: peachpuff;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.5);
+    transition: .5s box-shadow;
+    transition: .5s width;
+    margin-top: 40%;
+    margin-left: 10px;
+}
+
+#btn2:hover {
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0);
+    width: 200px;
+}

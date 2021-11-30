@@ -1,0 +1,52 @@
+div {
+    width: 500px;
+    height: 500px;
+    background-color: darkgray;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    margin-left: 60%;
+    margin-top: 5%;
+}
+
+#label1 {
+    color: white;
+    font-size: larger;
+    padding-right: 250px;
+}
+
+#label2 {
+    color: white;
+    font-size: larger;
+    padding-right: 272px;
+}
+
+#label3 {
+    color: white;
+    font-size: larger;
+    padding-right: 325px;
+}
+
+#label4 {
+    color: white;
+    font-size: larger;
+    padding-right: 243px;
+}
+
+h1 {
+    color: white;
+    padding-top: 7%;
+}
+
+input {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 70%;
+    height: 30px;
+    border-radius: 20px;
+    border-width: 1px;
+    background-color: transparent;
+}
+
+#Reg {
+    background-color: green;
+    color: white;
+}
