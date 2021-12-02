@@ -6,19 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Payment</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/fee_form.css') }}">
 </head>
 
 <body>
-    <form action="/fee/{{id}}" method="POST">
-        <input type="number" name="amount" placeholder="Enter Amount">
-        <br>
-        <select name="type">
+    <center>
+        <div>
+            <h1>Fee Details</h1>
+            <form action="/fee/{{id}}" method="POST">
+                <label for="amount" id="label1">Amount:</label><br>
+                <input type="number" name="amount" placeholder="Enter Amount" required>
+                <br>
+                <label for="type" id="label2">Type:</label><br>
+                <select name="type">
             <option value="school fee">School Fee</option>
             <option value="Hostel fee">Hostel Fee</option>
         </select>
-        <br>
-        <input type="submit" value="submit">
-    </form>
+                <br>
+                <input type="submit" value="submit" id="sub">
+            </form>
+        </div>
+    </center>
 </body>
 
 </html>

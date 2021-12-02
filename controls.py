@@ -12,8 +12,11 @@ size = 3000
 randomlink = ''.join(random.choices(string.ascii_letters+string.digits, k=size))
 randomStrings = str(randomlink)
 
+uploadings = 'static'
+
 app = Flask(__name__)
 Bootstrap(app)
+app.config['UPLOAD FOLDER'] = uploadings
 
 
 @app.route('/')
@@ -36,7 +39,7 @@ def adminLogin():
             message = 'Done'
             return redirect(f'/admin/{randomStrings}')
         else:
-            message = 'Wrong Admin Password Try Again'
+            message = 'Wrong Admin Name or Password Try Again'
             return render_template('index.html', message = message)
 
 @app.route('/studentLogin', methods=['GET', 'POST'])
@@ -55,8 +58,27 @@ def studentLogin():
             students = mycursor.fetchone()
             return render_template('profile.html', students = students)
         else:
-            message = 'Wrong Student Password Try Again'
+            message = 'Wrong Student Name or Password Try Again'
             return render_template('index.html', message = message)
+
+# Image Uploader
+@app.route('/uploader', methods=['GET', 'POST'])
+def upload():
+    if request.method == 'POST':
+        _name = request.form['nameSTUDENT']
+        f = request.files['file']
+        filename = secure_filename(f.filename)
+        ggg=f'static/{filename}'
+        sql = 'INSERT INTO profile (picture, nameSTUDENT) VALUES (%s, %s)'
+        val = (ggg, _name)
+        mycursor.execute(sql, val)
+        mydbase.commit()
+        f.save(os.path.join(app.config['UPLOAD FOLDER'], filename))
+        mycursor.execute(f"SELECT * FROM student WHERE ID={'ID'}")
+        students = mycursor.fetchone()
+        return render_template('profile.html', gc=ggg, students = students)
+
+# End Uploader
 
 @app.route(f'/admin/{randomStrings}')
 def admin():
@@ -83,7 +105,7 @@ def Register():
         mydbase.commit()
         return redirect('/list')
 
-@app.route('/list', methods=['GET', 'POST'])
+@app.route('/lis t', methods=['GET', 'POST'])
 def view():
     if request.method == 'GET':
         return render_template('list.html')
@@ -104,23 +126,6 @@ def students_details(id):
 
     return render_template('student_detail.html', students = students, payments = payments, courses = courses, exams = exams
     )
-
-# @app.route('/edit/<int:id>', methods=['GET', 'POST'])
-# def edit_customer(id):
-#     if request.method == 'GET':
-#         mycursor.execute(f'SELECT * FROM student WHERE ID={id}')
-#         student = mycursor.fetchone()
-#         return render_template('edit_student.html', student = student)
-#     if request.method == 'POST':
-#         _name = request.form['name']
-#         _stu_id = request.form['stu_id']
-#         _age = request.form['age']
-#         _mobile = request.form['mobile']
-#         sql = f'UPDATE student SET name = %s, stu_id = %s, age = %s , mobile = %s WHERE ID = %s'
-#         values = (_name, _stu_id, _age, _mobile, id)
-#         mycursor.execute(sql, values)
-#         mydbase.commit()
-#         return redirect('/register')
 
 
 @app.route('/delete/<int:id>')

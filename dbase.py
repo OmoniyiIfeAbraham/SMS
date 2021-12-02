@@ -50,7 +50,9 @@ mycursor.execute(
 )
 mycursor.execute(
     """CREATE TABLE IF NOT EXISTS profile(
+        nameSTUDENT VARCHAR(255),
         picture VARCHAR(255),
-        profile_id INT references student(ID)
+        profile_id INT NOT NULL AUTO_INCREMENT,
+        PRIMARY KEY(profile_id)
     )"""
 )

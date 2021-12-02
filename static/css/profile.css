@@ -1,0 +1,16 @@
+body {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+p {
+    font-size: larger;
+}
+
+#dp {
+    margin-top: -250px;
+}

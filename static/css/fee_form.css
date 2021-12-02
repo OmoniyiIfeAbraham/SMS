@@ -1,0 +1,55 @@
+body {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/static/images/fifteen.jpg');
+    position: relative;
+}
+
+div {
+    width: 500px;
+    height: 350px;
+    background-color: darkgray;
+    box-shadow: 10px 0 10px rgba(255, 255, 255, 0.5);
+    margin-top: 15%;
+}
+
+h1 {
+    color: white;
+}
+
+input {
+    width: 70%;
+    height: 30px;
+    border-radius: 20px;
+    border-width: 1px;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+
+select {
+    width: 70%;
+    height: 30px;
+    border-radius: 20px;
+    border-width: 1px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+#sub {
+    background-color: green;
+    color: white;
+}
+
+#label1 {
+    color: white;
+    font-size: larger;
+    padding-right: 280px;
+}
+
+#label2 {
+    color: white;
+    font-size: larger;
+    padding-right: 302px;
+}

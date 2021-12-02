@@ -1,0 +1,57 @@
+body {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+p {
+    font-size: larger;
+}
+
+#btn {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: .5s box-shadow;
+}
+
+#btn:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+table {
+    border-collapse: collapse;
+    width: 60%;
+    border: 1px black solid;
+}
+
+th {
+    border: 1px black solid;
+    height: 20px;
+    text-align: left;
+    padding: 5px;
+    border-bottom: 1px solid black;
+    background-color: rgb(85, 85, 216);
+    color: white;
+}
+
+td {
+    border: 1px black solid;
+    text-align: center;
+    height: 10px;
+    vertical-align: bottom;
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: grey;
+}

@@ -1,10 +1,27 @@
-div {
+/* #main {
+        display: flex;
+    }
+     */
+
+body {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/static/images/ten.jpg');
+    position: relative;
+}
+
+#maindiv {
     width: 500px;
     height: 500px;
     background-color: darkgray;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-    margin-left: 60%;
+    /* margin-left: 10%; */
     margin-top: 5%;
+    opacity: 0;
+    transition: 5s;
+    /* float: right; */
 }
 
 #label1 {
@@ -50,3 +67,21 @@ input {
     background-color: green;
     color: white;
 }
+
+
+/* for slanted div */
+
+
+/* .box {
+    background: linear-gradient(100deg, rgba(255, 0, 102)65%, transparent 65%);
+    width: 89%;
+    height: 680px;
+    /* background-color: red; */
+
+
+/* border-radius: 10px;
+float: left;
+margin: 0;
+
+}
+*/

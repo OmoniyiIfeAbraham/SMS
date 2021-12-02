@@ -6,56 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Details</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/profile.css') }}">
 </head>
 
 <body>
-    <h1>{{students.name}}</h1>
-    <p>{{students.stu_id}}</p>
-    <p>{{students.age}}</p>
-    <p>{{students.mobile}}</p>
+    <img src="{{gc}}" style="width: 200px; height: 200px; border-radius: 50px;">
+    <form action="http://localhost:5000/uploader" method="POST" enctype="multipart/form-data">
+        <input type="text" name="nameSTUDENT" placeholder="Name"><br>
+        <input type="file" name="file" /><br>
+        <input type="submit" />
+    </form>
 
-    <!-- <button><a href="/fee/{{students.ID}}">Update Fee</a></button>
-    <button><a href="/course/{{students.ID}}">Update Courses</a></button>
-    <button><a href="/exams/{{students.ID}}">Update Exams</a></button> -->
-
-    <!-- <table>
-        <tr>
-            <th>Amount</th>
-            <th>Type</th>
-        </tr>
-        {% for payment in payments %}
-        <tr>
-            <td>{{payment.amount}}</td>
-            <td>{{payment.type}}</td>
-        </tr>
-        {% endfor %}
-    </table>
-    <table>
-        <tr>
-            <th>Course-name</th>
-            <th>Course-code</th>
-        </tr>
-        {% for course in courses %}
-        <tr>
-            <td>{{course.course_name}}</td>
-            <td>{{course.course_type}}</td>
-        </tr>
-        {% endfor %}
-    </table>
-    <table>
-        <tr>
-            <th>Course-code</th>
-            <th>Exam-type</th>
-            <th>Exam-score</th>
-        </tr>
-        {% for exam in exams %}
-        <tr>
-            <td>{{exam.exam_code}}</td>
-            <td>{{exam.exam_type}}</td>
-            <td>{{exam.exam_score}}</td>
-        </tr>
-        {% endfor %}
-    </table> -->
+    <center id="dp">
+        <h1>Full Name: {{students.name}}</h1>
+        <p>Student ID: {{students.stu_id}}</p>
+        <p>Age: {{students.age}}</p>
+        <p>Mobile: {{students.mobile}}</p>
+    </center>
 </body>
 
 </html>
